@@ -1,0 +1,45 @@
+﻿<Page x:Class="spec.Pages.EditDataPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:spec.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EditDataPage">
+
+    <Grid Background="White">
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Width="250">
+            <TextBlock Text="ID услуги"
+                       FontSize="15"
+                       />
+            <TextBox Name="IdTbx"
+                     FontSize="15"
+                     Margin="10"/>
+            <TextBlock Text="Стоимость"
+                       FontSize="15"/>
+            <TextBox Name="Price"
+                     FontSize="15"
+                      Margin="10"/>
+            <TextBlock Text="Код услуги"
+                       FontSize="15"
+                       />
+            <TextBox Name="CodeUsluga"
+                     FontSize="15"
+                     Margin="10"/>
+            <TextBlock Text="Наименование услуги"
+                       FontSize="15"
+                       />
+            <ComboBox x:Name="CmbTitle"
+                      DisplayMemberPath="title"
+                       Margin="10"/>
+            <Button x:Name="SaveBtn"
+                    Height="20"
+                    Margin="10"
+                    Content="Сохранить"
+                    Click="SaveBtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

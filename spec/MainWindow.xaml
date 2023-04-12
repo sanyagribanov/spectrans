@@ -1,0 +1,64 @@
+﻿<Window x:Class="spec.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:spec"
+        mc:Ignorable="d" Icon="res/logo.ico"
+        Title="MБУ Спецтранс" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image HorizontalAlignment="Left"
+               Height="80" Margin="10,10,0,0"
+               VerticalAlignment="Top"
+               Width="80"
+               Source="res/logo.png"/>
+        <StackPanel  HorizontalAlignment="Right"
+                     VerticalAlignment="Top">
+            <Button Content="Администратор"
+                    Name="AdminBtn"
+                    Width="120"
+                    Height="30"
+                    FontSize="14"
+                    Foreground="White"
+                    Click="AdminBtn_Click"/>
+            <Button Content="Менеджер"
+                    Name="UserBtn"
+                    Width="120"
+                    Height="30"
+                    FontSize="14"
+                    Foreground="White"
+                    Click="UserBtn_Click"/>
+            <Button Content="Назад"
+                    Name="BackBtn"
+                    Width="120"
+                    Height="30"
+                    FontSize="14"
+                    Foreground="White"
+                    Click="BackBtn_Click"/>
+        </StackPanel>
+
+        <StackPanel  HorizontalAlignment="Center"
+                     VerticalAlignment="Top">
+            <TextBlock Text="МБУ Спецтранс"
+                       Margin="100,30,0,0"
+                       FontFamily="Arial"
+                       FontSize="30"
+                       FontStyle="Oblique"
+                       Height="35"
+                       Width="319"/>
+        </StackPanel>
+
+        <Frame Grid.Row="1"
+               x:Name="MainFrame"
+               NavigationUIVisibility="Hidden"/>
+
+        <Grid>
+            <DataGrid Margin="0,97,0,0"
+                      Background="#32a852"/>
+        </Grid>
+    </Grid>
+</Window>
